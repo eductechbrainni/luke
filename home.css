@@ -1,0 +1,607 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding-top: 60px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #0056b3;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+#logo img {
+    width: 200px; /* or whatever size fits your design */
+    height: auto;
+    position: absolute;
+    top: -2.8rem;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+}
+
+.navbar a:hover {
+    color: #007bff;
+}
+
+.button {
+    background-color: #74ba9c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button.login {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.button.register {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+.icon {
+    display: none;
+    cursor: pointer;
+}
+/* ai-education-cta */
+
+/* SLIDE CSS CODE */
+
+    
+    i{
+    color: black;
+    }
+
+    .ai-education-section {
+        width: 100%;
+        overflow: hidden;  /* Hides anything outside the section */
+    }
+    
+    .slider {
+        display: flex;
+        width: 300%;  /* Adjust based on the number of slides */
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .slide {
+        width: 33.3333%;  /* Assuming there are three slides */
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 600px;  /* Set a height */
+    }
+    
+    .slide-content {
+        text-align: center;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+/* Styling for the slider content */
+.slide-content h1 {
+    font-size: 38px; /* Increase the font size for the header */
+    color: #ffffff; /* Set text color, assuming a darker background */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+/* Highlighting 'i' in a different style */
+.ai-highlight {
+    color: #007bff; /* Bright blue for contrast */
+    font-weight: bold; /* Making the highlighted text bold */
+}
+
+.slide-content p {
+    font-size: 22px; /* Larger font size for the paragraph */
+    color: #ffffff; /* Ensuring the paragraph is easily readable */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.ai-education-cta {
+    font-size: 25px; /* Increasing the font size for the call to action */
+    padding: 12px 24px; /* Larger padding for a bigger button */
+    background-color: #007bff; /* Bright blue background for visibility */
+    color: white; /* White text for contrast */
+    text-decoration: none; /* Removing underline from the link */
+    border-radius: 5px; /* Rounded corners for the button */
+    display: inline-block; /* Ensuring the button does not break into a new line */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.ai-education-cta:hover {
+    background-color: #0056b3; /* Darker blue on hover for visual feedback */
+}
+
+/* Adding a subtle shadow to text for better visibility on varied backgrounds */
+.slide-content h1, .slide-content p, .ai-education-cta {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.images{
+border-radius: 2rem;
+padding: 0.5rem 2rem;
+background-color: white;
+ }
+ .how-it-works-section {
+background-color: #0056b3;
+padding: 50px 20px;
+text-align: center;
+color: white;
+
+}
+
+.cards-container {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+/* border: 1px solid #007bff; */
+border-radius: 10px;
+}
+
+.how-it-works-card {
+/* background: #f9f9f9; */
+border-radius: 8px;
+/* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+padding: 20px;
+width: 240px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+cursor: pointer;
+color: white !important;
+}
+
+.how-it-works-card:hover {
+transform: translateY(-5px);
+/* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); */
+}
+
+.card-step {
+font-size: 24px;
+color: #007bff;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+.how-it-works-card h3 {
+font-size: 18px;
+color: white !important;
+margin: 10px 0;
+}
+
+.how-it-works-card p {
+font-size: 14px;
+color: white !important;
+}
+.card-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 10px; /* Adjust as needed */
+}
+
+.card-icon img {
+width: 40px; /* Adjust based on your icon size */
+height: auto;
+margin-right: 10px; /* Space between icon and step number */
+}
+
+/* Update .card-step to display inline with the icon */
+.card-step {
+display: inline-block;
+font-size: 24px;
+color: #007bff;
+font-weight: bold;
+vertical-align: middle;
+}
+
+/* Ensure the text aligns correctly with the new icon */
+.how-it-works-card h3, .how-it-works-card p {
+text-align: left;
+padding: 0 15px; /* Add padding to align text if needed */
+}
+
+
+.site-footer {
+background-color: #007bff;
+color: #ffffff;
+padding: 20px;
+text-align: center;
+}
+
+.footer-content p, .footer-links {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+.footer-links li, .social-links li {
+display: inline;
+margin-right: 15px;
+}
+
+.footer-links a, .social-links a {
+color: #ffffff;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.social-links a {
+font-size: 1.2em; /* Adjust the size of the icons */
+}
+
+.social-links a:hover, .footer-links a:hover {
+color: #007bff; /* Change color on hover */
+}
+
+.image {
+flex: 1;
+}
+
+.image img {
+width: 100%;
+max-width: 500px; /* Adjust based on your image size and design */
+height: auto;
+}
+
+
+
+.learning-image {
+flex: 1;
+}
+
+.learning-image img {
+width: 100%;
+max-width: 500px; /* Adjust based on your image size and design */
+height: auto;
+}
+.unique-section {
+padding: 40px 20px;
+text-align: center;
+background-color: #f4f4f4;
+}
+
+.features-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 2px;
+padding-top: 20px;
+}
+
+.feature-card {
+width: calc(22% - 20px);
+background-color: #ffffff;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+overflow: hidden;
+margin: 8px;
+transition: transform 0.3s ease;
+border: 5px solid #007bff;
+}
+
+.feature-card:hover {
+transform: translateY(-5px);
+}
+
+.feature-card img {
+width: 50%;
+height: auto;
+border-bottom: 1px solid #eee;
+}
+
+.feature-card h4 {
+margin: 16px;
+color: #007bff;
+}
+
+.feature-card p {
+padding: 0 16px 16px 16px;
+color: #666;
+font-size: 0.9rem;
+margin-bottom: 16px;
+text-align: left;
+}
+.about-draglearn {
+padding: 80px 20px; /* Increase padding to accommodate the highest step */
+background-color: #f0f0f0;
+display: flex;
+justify-content: center;
+align-items: flex-end; /* Align squares at the bottom */
+}
+
+.about-grid {
+display: flex; /* Use flexbox for a single row layout */
+flex-wrap: nowrap; /* Prevent wrapping to a new line */
+gap: 20px; /* Space between squares */
+position: relative; /* Establish positioning context */
+max-width: 1000px;
+margin: auto; /* Center the grid container */
+}
+
+
+.about-square{
+color: rgb(0, 0, 0) !important;
+font-weight: 700;
+}
+/* Adjust 'top' value to create the stair effect */
+.about-square:nth-child(1) { top: 0; background-color: #ade8f4; }
+.about-square:nth-child(2) { top: -20px; background-color: #caf0f8; }
+.about-square:nth-child(3) { top: -40px; background-color: #90e0ef; }
+.about-square:nth-child(4) { top: -60px; background-color: #48cae4; }
+.about-square:nth-child(5) { top: -80px; background-color: #00b4d8; }
+
+@keyframes dance {
+0% { transform: rotate(0deg) scale(1); }
+25% { transform: rotate(3deg) scale(1.05); }
+50% { transform: rotate(-3deg) scale(1.05); }
+75% { transform: rotate(3deg) scale(1.05); }
+100% { transform: rotate(0deg) scale(1); }
+}
+
+.about-square:hover {
+/* Apply the "dance" animation on hover */
+animation: dance 0.5s ease-in-out forwards;
+}
+
+/* Adjust existing .about-square hover to work with the animation */
+.about-square {
+background-color: #ffffff;
+padding: 20px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+border-radius: 8px;
+width: calc(79%/5 - 40px); /* Adjust based on your layout */
+position: relative;
+top: 0; /* Initial top position */
+transition: top 0.3s ease; /* Smooth transition for top position change */
+will-change: transform; /* Optimizes animations */
+z-index: 1; /* Ensure hover state is above non-hovered squares */
+}
+
+/* Add a slight hover effect for non-animated state */
+.about-square:hover {
+z-index: 2; /* Elevate the hovered square */
+top: -5px; /* Move up slightly on hover */
+}
+
+.about-draglearn h5 {
+text-align: center; /* Center-align the text */
+color: #005A87; /* Use a color that matches your design */
+margin: 0 0 20px; /* Add some space below the heading */
+padding: 0 20px; /* Ensures padding on smaller screens */
+font-size: 1.5rem; /* Adjust size as needed */
+font-weight: normal; /* Adjust weight as desired */
+line-height: 1.4; /* Improves readability */
+border-bottom: 2px solid #005A87; /* Optional: adds a subtle underline for emphasis */
+display: inline-block; /* For the border-bottom to fit text width */
+margin-bottom: 40px; /* Increase space below the heading for visual separation */
+padding-bottom: 5px; /* Fine-tunes spacing above the underline */
+}
+
+.about-grid {
+display: flex; /* Adjusted for a flexible layout */
+flex-wrap: wrap; /* Allows squares to wrap */
+justify-content: center; /* Centers squares in the container */
+gap: 20px; /* Maintains space between squares */
+padding-top: 20px; /* Space between text and squares */
+}
+
+
+
+.application-section {
+max-width: 600px;
+margin: 40px auto;
+padding: 20px;
+box-shadow: 0 2px 4px rgba(0,0,0,.1);
+border-radius: 8px;
+background-color: #f9f9f9;
+border: 2px solid #007bff;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.application-form {
+width: 100%; /* Ensures form elements use full container width */
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.application-form h2 {
+color: #007bff;
+}
+
+.application-form label {
+align-self: start;
+}
+
+
+
+
+.application-form input,
+.application-form select,
+.application-form button {
+width: calc(100% - 20px); /* Adjust width to match the form container */
+padding: 10px;
+margin: 5px 0;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box; /* Ensures padding does not affect the final size */
+transition: all 0.3s ease; /* Smooth transition for focus animation */
+}
+
+.application-form input:focus,
+.application-form select:focus {
+border-color: #007bff;
+box-shadow: 0 0 8px rgba(0, 123, 255, .25);
+}
+
+.submit-btn {
+background-color: #007bff;
+color: #ffffff;
+cursor: pointer;
+border: none;
+transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+background-color: #0056b3;
+}
+
+
+
+@media (max-width: 768px) {
+    .slide-content {
+        width: 90%; /* Slightly less width for padding */
+    }
+}
+
+
+@media (max-width: 992px) {
+.cards-container {
+flex-direction: row;
+justify-content: space-around;
+}
+}
+
+
+@media (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 600px) {
+    .icon {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 8%;
+     
+       
+            color: white;
+    }
+   
+.cards-container {
+flex-direction: column;
+align-items: center;
+}
+.navbar-links, .navbar-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navbar.responsive .navbar-links, .navbar.responsive .navbar-buttons {
+    display: flex;
+    position: absolute;
+    background-color: #0056b3;
+    right: 0;
+    top: 60px;
+    width: 100%;
+}
+
+.icon {
+    display: block;
+}
+.how-it-works-card {
+width: 80%;
+max-width: 340px; /* Ensures the cards are not too wide on smaller screens */
+
+}
+
+.footer-content {
+text-align: center;
+}
+
+.footer-links li, .social-links li {
+display: block;
+margin: 5px 0;
+}
+
+.content {
+flex-direction: column;
+}
+
+.text, .learning-image {
+flex: none;
+width: 100%; /* Ensure full width on smaller screens */
+}
+
+.learning-image img {
+max-width: 100%; /* Ensure the image is not oversized on smaller screens */
+}
+.unique-section {
+
+padding: 5px 20px;
+}
+
+.feature-card {
+width: calc(50% - 20px);
+}
+
+.about-grid {
+flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+.about-square {
+top: 0; /* Reset the stair effect for a standard layout on small screens */
+width: 100%; /* Full width for better readability on small devices */
+margin-bottom: 20px; /* Space between stacked squares */
+left: -2rem;
+}
+
+
+}
+
+
+
+@media (max-width: 480px) {
+.features-container {
+flex-direction: column;
+}
+#logo img {
+width: 120px;
+height: auto;
+position: absolute;
+top: -2rem;
+left: 0;
+}
+
+.feature-card {
+width: 100%;
+}
+}

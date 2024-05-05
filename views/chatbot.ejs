@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Buddy Chat</title>
+    <link rel="stylesheet" href="/chat.css"> <!-- Ensure you have a CSS file for styling -->
+</head>
+<body>
+    
+ <!-- Display the user's name if authenticated -->
+ <% if (isAuthenticated) { %>
+    <div class="username-display">
+        Hello, <%= user.username %>!
+    </div>
+<% } else { %>
+    <!-- Button to open the registration/login modal -->
+    <button onclick="openAuthWarningModal()" class="register-login-btn">Register / Log In</button>
+<% } %>
+
+<!-- Modal HTML as provided -->
+<div id="authWarningModal" class="modal" style="<%= !isAuthenticated ? 'display:block;' : 'display:none;' %>">
+    <div class="modal-content">
+        <span class="close" onclick="closeAuthWarningModal()">&times;</span>
+        <p>Note: Your progress and interactions won't be tracked or saved unless you sign up or log in.</p>
+        <!-- Add a button inside the modal for direct navigation to the register/login page -->
+        <button onclick="window.location.href='/register'" class="modal-register-btn">Go to Register / Log In</button>
+    </div>
+</div>
+
+<script>
+   function openAuthWarningModal() {
+    document.getElementById('authWarningModal').style.display = 'block';
+}
+
+function closeAuthWarningModal() {
+    document.getElementById('authWarningModal').style.display = 'none';
+}
+
+</script>
+</script>
+    <div id="selectedImageContainer" class="selected-image-container"></div>
+    <a href="/" style="background-color: red;">Home</a>
+    <div id="chatBox" class="chat-box">
+        <div class="chat-messages">
+            <!-- Chat messages will go here -->
+        </div>
+        <div class="input-area">
+            <input type="text" id="userInput" class="user-input" placeholder="Type here...">
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+  
+    <div id="modalContainer" class="modal-container" style="display:none;">
+        <div id="modalContent" class="modal-content1">
+            <!-- Dynamic content will be inserted here -->
+            <span class="close-modal" onclick="closeVideoModal()">&times;</span>
+        </div>
+    </div>
+    
+    <script>
+        const questions = <%- questions %>;
+    </script>
+
+    <script src="/chat.js"></script> <!-- Ensure your JavaScript content is in script.js -->
+ 
+    
+</body>
+</html>

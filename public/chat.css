@@ -1,0 +1,578 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0056b3 !important;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Chat Box Styling */
+.chat-box {
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    /* border-radius: 8px; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    position: fixed;
+    margin: 2rem;
+    top: 0;
+    margin-bottom: 30rem;
+}
+
+/* Message Styling */
+.message {
+    padding: 10px;
+    margin: 5px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.chatbot-message {
+    background-color: #ffffff;
+    border: 1px solid #d0dfff;
+    color: #000;
+}
+
+.user-message {
+    background-color: #d1f4d1;
+    border: 1px solid #b2e4b2;
+    color: #000;
+    align-self: flex-end;
+    width: 80%;
+}
+
+/* Images Container */
+.images-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.chat-messages {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    /* Other styles */
+
+}
+.chat-image {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.chat-image:hover {
+    transform: scale(1.1);
+}
+
+.username-display {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+
+/* Input and Button Styling */
+.user-input {
+    outline: none;
+    border: none;
+    padding: 10px;
+    width: calc(100% - 90px);
+    border-radius: 0;
+}
+
+#sendBtn {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#sendBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Ensuring the input field and button are in the same row */
+.chat-box > div {
+    display: flex;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    margin-right: -1px; /* Aligns button tightly with the input */
+}
+
+/* Scrollbar Styling for Chat Box */
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message, .chat-image {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.images-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.chat-image {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.chat-image:hover {
+    transform: scale(1.1);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.message {
+    opacity: 0; /* Start out transparent */
+    animation: slideIn 0.5s forwards; /* Use 'forwards' to maintain the final state */
+}
+
+
+.selected-image-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px; /* Or any size you prefer */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected-image {
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.grades-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 3rem;
+}
+
+.grade-button {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.grade-button:hover {
+    background-color: #e7e7e7;
+}
+
+
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 9999; /* Ensure the modal is on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    overflow: auto;
+}
+
+.video-modal {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: red;
+}
+.chat-messages {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    /* Other styles */
+}
+
+#chatBox {
+    display: flex;
+  
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.input-area{
+    position: fixed;
+    top: 1rem;
+    z-index: 999;
+    border-radius: 3rem;
+    /* width: 46%; */
+    width: 43%;
+    position: fixed;
+    top: 30rem;
+}
+
+
+/* Chat Box Styling */
+.chat-box {
+    width: 90%;
+    max-width: 600px;
+    background-color: #f7f7e7;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border: 1px solid #ddd; /* Subtle border */
+}
+
+/* Messages Container */
+.chat-messages {
+    overflow-y: auto;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+/* Individual Message Styling */
+.message {
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 18px;
+    display: inline-block;
+    max-width: 80%;
+    margin-bottom: 8px; /* Space between messages */
+}
+
+/* Bot Messages */
+.chatbot-message {
+    background-color: #f0f0f0;
+    color: #000;
+    align-self: flex-start; /* Align to the left */
+    margin-right: auto; /* Ensure it sticks to the left */
+    margin-bottom: 2rem;
+}
+
+/* User Messages */
+.user-message {
+    background-color: #0078FF; /* A blue shade for user messages */
+    color: #fff;
+    align-self: flex-end; /* Align to the right */
+    margin-left: auto; /* Ensure it sticks to the right */
+    margin-bottom: 3rem;
+}
+
+/* Input Area Styling */
+.input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #f0f0f0; /* Light grey background for input area */
+    border-top: 1px solid #ddd; /* Separates input area from messages */
+}
+
+.user-input, #sendBtn {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 20px; /* Rounded corners for input field and send button */
+}
+
+.user-input {
+    flex-grow: 1;
+    margin-right: 10px; /* Space between input field and send button */
+}
+
+#sendBtn {
+    background-color: #0078FF; /* Match user message color */
+    color: #fff;
+    cursor: pointer;
+    width: 13%;
+}
+
+#sendBtn:hover {
+    background-color: #005ec2; /* Darker shade on hover */
+}
+
+.topic-button {
+    background-color: #007BFF; /* Vibrant blue */
+    color: #FFFFFF; /* White */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px; /* Slightly rounded corners for a modern look */
+    font-size: 16px; /* Adequate text size for readability */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+
+    margin-right: 10px; /* Adds space to the right of each button */
+    margin-bottom: 3rem; /* Adds space below each button for wrapping scenarios */
+}
+
+.topic-button:hover {
+    background-color: #0056b3; /* A slightly darker shade of blue for hover state */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.topic-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.5); /* Custom focus style to enhance accessibility */
+}
+
+/* If you want to remove the spacing from the last button to the right (in case they are inline) */
+.topic-container:last-child .topic-button {
+    margin-right: 0;
+}
+
+
+.grade-button {
+    background-color: #00a1b7; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 12px 24px; /* Top and Bottom, Left and Right padding */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 16px; /* Text size */
+    cursor: pointer; /* Cursor changes to pointer to indicate clickability */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+    margin: 5px; /* Spacing around buttons to prevent them from touching */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+.grade-button:hover, .grade-button:focus {
+    background-color: #00a1b7; /* Slightly darker shade of green on hover/focus */
+    transform: translateY(-2px); /* Lift effect on hover */
+    outline: none; /* Removes the outline to keep the design clean */
+}
+
+.grade-button:active {
+    background-color: #00a1b7; /* Even darker for the active state */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Smaller shadow to simulate pressing down */
+    transform: translateY(1px); /* Simulate pressing the button down */
+}
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 31, 31, 0.733); /* Dark background */
+    z-index: 1000; /* Ensure the popup is above other content */
+}
+
+.popup-content {
+    width: 900px;
+    height: 150px; /* Increased height to fit multiple rows of images */
+    background-color: #00a1b7;
+    color: #f7f7e7;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+/* Style for images in the popup */
+.popup-content ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow multiple rows */
+}
+
+.popup-content li {
+    margin: 5px; /* Add some spacing between images */
+}
+
+.popup-content img {
+    max-width: 80px; /* Set maximum width for images */
+    max-height: 80px; /* Set maximum height for images */
+    display: block;
+    margin: auto; /* Center the image */
+    cursor: pointer; /* Change cursor to pointer when hovering over images */
+}
+
+
+
+
+.register-login-btn, .modal-register-btn {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.register-login-btn:hover, .modal-register-btn:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.75); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #74ba9c;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    /* border: 1px solid #888; */
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 1.1rem;
+}
+.modal-content1 {
+    background-color: #ffffff; /* White background */
+    width: 90%; /* 90% of the viewport width */
+    height: 90%; /* 90% of the viewport height */
+    margin: auto;
+    padding: 20px;
+    overflow-y: auto; /* Allow scrolling for content that exceeds the height */
+    position: relative; /* Needed for absolute positioning of the close button */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Styled corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #000;
+}
+.close:hover,
+.close:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.question {
+    text-align: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    align-items: center;
+}
+
+.question img {
+    width: 100%; /* Adjust based on your design requirements */
+    margin: 0 auto; /* Center the image */
+    display: block; /* Needed for margin auto to work */
+}
+
+
+
+.draggable {
+    cursor: pointer;
+    user-select: none; /* Prevent selection */
+}
+
+
+.dropzone {
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+}
